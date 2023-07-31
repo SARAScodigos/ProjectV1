@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles.Home.css">
+  <style>
+    *{
+      background-color: rgb(124, 174, 174);
+      color: rgb(35, 35, 35);
+      text-align: center;
+    }
+    ul{
+      list-style: none;
+    }
+
+  </style>
+  <title>Home</title>
+</head>
+<body>
+  <h1>Hello!, Welcome to my office site. </h1>
+  <h2>Today is a great day: {{fecha}}</h2>
+  <p>I'm your proffesor: {{names}}</p>
+  <p>At the {{clases}} cicle, we're start with {{materia}}</p>
+
+  <!--Recorrer elementos de una lista-->
+  <!--Agregar concicional if-->
+  <ul>
+    {% if temas %}
+      {% for i in temas %}
+        <li>{{i}}</li>
+      {% endfor %}
+      {% else %}
+      <p>La lista de temas aún no están disponibles</p>
+    {% endif %}
+
+  </ul>
+  <button>Sent your smile</button>
+</body>
+</html>
